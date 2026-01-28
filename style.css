@@ -65,42 +65,27 @@ body {
     opacity: 0.8;
 }
 
-/* Placeholder Styling */
-.placeholder-img {
-    background: #1e293b;
-    border: 2px dashed #475569;
+/* Media Styling */
+.reveal img {
+    max-width: 100%;
+    height: auto;
     border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #94a3b8;
-    font-size: 0.8rem;
-    padding: 1rem;
-    margin: 0.8rem auto;
-    transition: all 0.3s ease;
-}
-
-.placeholder-img span {
-    color: var(--accent-color);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
 }
 
 .main-visual {
-    width: 70%;
-    height: 220px;
+    width: 60%;
+    margin: 1rem auto;
 }
 
 .half-width {
     width: 48%;
-    height: 320px;
 }
 
 .small-visual {
-    width: 50%;
-    height: 120px;
-    margin-top: 1rem;
+    width: 45%;
+    margin: 1rem auto;
 }
 
 /* Lists */
@@ -217,32 +202,19 @@ body {
 }
 
 /* Video Section */
-.video-placeholder {
-    width: 75%;
-    height: 320px;
+.video-container {
+    width: 80%;
+    margin: 1rem auto;
     background: #000;
-    border: 2px solid #334155;
     border-radius: 20px;
-    margin: 1.5rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 2px solid #334155;
 }
 
-.play-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--primary-gradient);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
-    box-shadow: 0 0 20px rgba(129, 140, 248, 0.4);
+.final-video {
+    width: 100%;
+    display: block;
 }
 
 .thank-you {
@@ -262,8 +234,9 @@ body {
 /* Reveal Overrides */
 .reveal section img {
     border: none;
-    box-shadow: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     background: none;
+    margin: 0;
 }
 
 .reveal .controls {
