@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Developer's Desk - Computer Graphics Presentation</title>
+    <meta name="description" content="A presentation on creating a low-poly developer's desk environment using Blender and Eevee.">
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title & Concept -->
+            <section data-background-color="#0f172a" class="title-slide">
+                <div class="glass-container">
+                    <h1 class="gradient-text">The Developer’s Desk</h1>
+                    <p class="subtitle">A Low-Poly Environment Study</p>
+                    <div class="author-info">
+                        <p><strong>Ayoub Rezaei</strong></p>
+                        <p>Game Studies & Engineering</p>
+                    </div>
+                </div>
+                <div class="placeholder-img main-visual">
+                    <p>High-Quality Screenshot Placeholder<br><span>desk_scene_final.png</span></p>
+                </div>
+                <aside class="notes">
+                    Hi, I'm Ayoub Rezaei, a Game Studies & Engineering student. 
+                    The theme of my project is "The Developer's Desk." 
+                    I wanted to represent my professional background as a front-end developer through a low-poly aesthetic, creating a space that feels both personal and creative.
+                </aside>
+            </section>
+
+            <!-- Slide 2: The Mandatory Constraints -->
+            <section data-background-color="#0f172a">
+                <div class="glass-container">
+                    <h2 class="gradient-text">Mandatory Constraints</h2>
+                    <ul class="checkmark-list">
+                        <li class="fragment fade-up"><span>Engine:</span> Rendered in Eevee Render <i class="check">✓</i></li>
+                        <li class="fragment fade-up"><span>Style:</span> Strict Low-Poly (Shade Flat) <i class="check">✓</i></li>
+                        <li class="fragment fade-up"><span>Assets:</span> 6 Custom-Modeled Objects <i class="check">✓</i>
+                            <ul class="sub-list">
+                                <li>Desk, Monitor, PC, Chair, Keyboard, Lamp</li>
+                            </ul>
+                        </li>
+                        <li class="fragment fade-up"><span>Lighting:</span> 3-Point Setup <i class="check">✓</i>
+                            <ul class="sub-list">
+                                <li>Key, Fill, and Rim lights</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    I strictly followed all the mandatory requirements. 
+                    All 6 assets were custom modeled. 
+                    The focus was on scene "grounding" and ensuring each object had a distinct silhouette despite the low-poly constraint.
+                </aside>
+            </section>
+
+            <!-- Slide 3: Process & Implementation -->
+            <section data-background-color="#0f172a">
+                <div class="flex-container">
+                    <div class="text-content">
+                        <h2 class="gradient-text">Process & Implementation</h2>
+                        <ul class="modern-list">
+                            <li class="fragment fade-right"><strong>Modeling:</strong> Primitive manipulation, Loop Cuts, and Extrusions.</li>
+                            <li class="fragment fade-right"><strong>Shaders:</strong> Emission shaders for the monitor glow and ambient vibes.</li>
+                            <li class="fragment fade-right"><strong>Animation:</strong> 360-degree camera orbit parented to an "Empty" anchor.</li>
+                        </ul>
+                    </div>
+                    <div class="placeholder-img half-width fragment zoom-in">
+                        <p>Work in Progress Screenshot<br><span>(Gray Meshes)</span><br><span>wip_mesh.png</span></p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    My background in Three.js helped me understand spatial logic, but Blender’s destructive modeling workflow was a new and interesting challenge. 
+                    I focused on efficient topology for the low-poly look.
+                </aside>
+            </section>
+
+            <!-- Slide 4: Obstacles Encountered -->
+            <section data-background-color="#0f172a">
+                <h2 class="gradient-text">Obstacles Encountered</h2>
+                <div class="flex-container">
+                    <div class="placeholder-img half-width">
+                        <p>Shadow Comparison<br><span>(Before/After)</span><br><span>shadow_comparison.png</span></p>
+                    </div>
+                    <div class="text-content">
+                        <div class="obstacle-card fragment fade-left">
+                            <h3>The "Void" Problem</h3>
+                            <p>Objects appeared to float; solved by grounding geometry.</p>
+                        </div>
+                        <div class="obstacle-card fragment fade-left">
+                            <h3>Light Bleeding</h3>
+                            <p>Tweaked Eevee’s "Contact Shadows" and "Shadow Map" settings.</p>
+                        </div>
+                        <div class="obstacle-card fragment fade-left">
+                            <h3>Scale Proportions</h3>
+                            <p>Balanced chair and desk dimensions for realistic feel.</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    The biggest frustration was the "gray void" where objects looked ungrounded. 
+                    I solved this through technical render settings and ensuring crisp edges on the low-poly geometry using Eevee's shadow maps.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Lessons Learned -->
+            <section data-background-color="#0f172a">
+                <div class="glass-container">
+                    <h2 class="gradient-text">Lessons Learned</h2>
+                    <div class="lessons-grid">
+                        <div class="lesson-item fragment custom">
+                            <i class="icon">💡</i>
+                            <h3>Lighting Over Geometry</h3>
+                            <p>In low-poly art, lighting does 70% of the work.</p>
+                        </div>
+                        <div class="lesson-item fragment custom">
+                            <i class="icon">⚙️</i>
+                            <h3>Engine Capabilities</h3>
+                            <p>Real-time post-processing (Bloom, AO) in Eevee.</p>
+                        </div>
+                        <div class="lesson-item fragment custom">
+                            <i class="icon">📁</i>
+                            <h3>Asset Management</h3>
+                            <p>Using "Append" and "Pack Resources" for clean projects.</p>
+                        </div>
+                    </div>
+                    <div class="placeholder-img small-visual fragment fade-up">
+                        <p>Monitor Glow Close-up<br><span>(Bloom Effect)</span><br><span>monitor_glow.png</span></p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    This project changed my perspective on 3D storytelling. 
+                    I realized that even simple geometry can feel high-end with the right lighting and atmosphere.
+                </aside>
+            </section>
+
+            <!-- Slide 6: Final Result -->
+            <section data-background-color="#000">
+                <h2 class="gradient-text">Final Result</h2>
+                <div class="video-placeholder">
+                    <div class="play-icon">▶</div>
+                    <p>Final Animated Video Render<br><span>final_render.mp4</span></p>
+                </div>
+                <div class="thank-you fragment fade-up">
+                    <p>Thank you for your attention!</p>
+                    <p class="questions">Questions?</p>
+                </div>
+                <aside class="notes">
+                    Let the video speak for itself. Thank the audience and ask if there are any questions.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'convex',
+            backgroundTransition: 'fade',
+            controls: true,
+            progress: true,
+            center: true,
+            mouseWheel: true,
+            plugins: [ ]
+        });
+    </script>
+</body>
+</html>
